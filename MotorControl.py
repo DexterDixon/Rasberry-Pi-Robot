@@ -43,11 +43,15 @@ while True:
                 motor_1 = leftstick
         
         pwm.continuous_servo[0].throttle = motor_1
-        
-        print("Motor_1: ", motor_1)
 '''
         The pwm.continuous_servo[0].throttle function is what sends the PWM signal
         In the "[]" you specify the channel the speed controller is connected to, so anywhere from 0-15
         In our case we pass the value motor_1 (value after the "=" sign), which we mapped our left joystick to. We can send a value anywhere from
         -1 which is full reverse, 0 which is stopping, and +1 which is full forward.
 '''
+        print("Motor_1: ", motor_1)
+'''
+End of Program Tips:
+~Keep in mind that in python indentation is very important
+~Different controllers have different button and axis values, always double check by running "MapJoystick.py".
+
